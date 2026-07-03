@@ -314,7 +314,9 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/pixel \
+    hardware/google/pixel/pixelstats \
+    hardware/google/pixel/power-libperfmgr \
+    hardware/google/thermal \
     hardware/google/interfaces \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek \
