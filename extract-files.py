@@ -148,6 +148,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('liblog.so'),
     'vendor/bin/mnld': blob_fixup()
         .replace_needed('libmnl.so', 'libmnl_mtk.so'),
+    ('system_ext/lib64/libaudiotoolkit.so', 'system_ext/lib64/libem_audio_jni.so'): blob_fixup()
+        .add_needed('libaudiobase.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
