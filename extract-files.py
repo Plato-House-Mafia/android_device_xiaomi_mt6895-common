@@ -137,12 +137,14 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/lib64/librt_extamp_intf.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
-    'vendor/lib64/mt6895/libmnl.so': blob_fixup()
+    'vendor/lib64/mt6895/libmnl_mtk.so': blob_fixup()
         .add_needed('libcutils.so'),
     ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libteei_daemon_vfs.so': blob_fixup()
         .add_needed('liblog.so'),
+    'vendor/bin/mnld': blob_fixup()
+        .replace_needed('libmnl.so', 'libmnl_mtk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
