@@ -88,6 +88,10 @@ $(call soong_config_set,libcameraservice,ext_lib,//$(LOCAL_PATH):libcameraservic
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/camerax-vendor-extensions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/camerax-vendor-extensions.xml
 
+# Connectivity
+PRODUCT_PACKAGES += \
+    conninfra_loader
+
 # ConsumerIR
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
